@@ -192,7 +192,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 163007956}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 570437578}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -264,9 +264,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3db5b36bc3151384f84dc2a81e61d442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementForce: 0
-  jumpForce: 0
-  rigidBody: {fileID: 0}
+  controller: {fileID: 0}
+  maxSpeed: 10
+  gravity: -30
+  jumpHeight: 3
+  groundCheck: {fileID: 136232499}
+  groundRadius: 0.5
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 8
+  velocity: {x: 0, y: 0, z: 0}
   isGrounded: 0
 --- !u!143 &570437579
 CharacterController:
